@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016B77B61CB3F9A000010273 /* startaria.sh in Resources */ = {isa = PBXBuildFile; fileRef = 016B77B51CB3F9A000010273 /* startaria.sh */; };
 		01D045B01C035821001468EF /* aria2c in Resources */ = {isa = PBXBuildFile; fileRef = 01D045AF1C035821001468EF /* aria2c */; };
 		01D045B91C035C4B001468EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B71C035C4B001468EF /* MainMenu.xib */; };
 		01D045BA1C035C4B001468EF /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B81C035C4B001468EF /* Window.xib */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		016B77B51CB3F9A000010273 /* startaria.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = startaria.sh; path = "../../../Desktop/aria2gui-a0f6ee5efb28bc8022739c952617cad4d79b94f2/MacGap/startaria.sh"; sourceTree = "<group>"; };
 		01D045AF1C035821001468EF /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = aria2c; path = MacGap/aria2c; sourceTree = "<group>"; };
 		01D045B71C035C4B001468EF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		01D045B81C035C4B001468EF /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		FAE451C414BA79C600190544 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
+				016B77B51CB3F9A000010273 /* startaria.sh */,
 				01D045B71C035C4B001468EF /* MainMenu.xib */,
 				01D045B81C035C4B001468EF /* Window.xib */,
 				FA3250E014BA87B800BF0781 /* Classes */,
@@ -309,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016B77B61CB3F9A000010273 /* startaria.sh in Resources */,
 				FA3250E514BA883A00BF0781 /* public in Resources */,
 				01D045B01C035821001468EF /* aria2c in Resources */,
 				FAE451C914BA79C600190544 /* InfoPlist.strings in Resources */,
