@@ -26,7 +26,7 @@ Aria2GUI
 
 ## With special thanks to:  
 
- - [Aria2](http://aria2.sourceforge.net/)
+ - [Aria2](https://aria2.github.io)
  - [YAAW](https://github.com/binux/yaaw)
  - [MacGap](https://github.com/MacGapProject)
 
