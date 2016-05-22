@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		013DC30B1CD46CAD00129D56 /* startaria.sh in Resources */ = {isa = PBXBuildFile; fileRef = 013DC30A1CD46CAD00129D56 /* startaria.sh */; };
-		01D045B01C035821001468EF /* aria2c in Resources */ = {isa = PBXBuildFile; fileRef = 01D045AF1C035821001468EF /* aria2c */; };
+		0150A6591CEDFDF3005EF883 /* aria2c in Resources */ = {isa = PBXBuildFile; fileRef = 0150A6581CEDFDF3005EF883 /* aria2c */; };
 		01D045B91C035C4B001468EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B71C035C4B001468EF /* MainMenu.xib */; };
 		01D045BA1C035C4B001468EF /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B81C035C4B001468EF /* Window.xib */; };
 		1495814F15C15CCC00E1CFE5 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495814E15C15CCC00E1CFE5 /* Notice.m */; };
@@ -58,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		013DC30A1CD46CAD00129D56 /* startaria.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = startaria.sh; sourceTree = "<group>"; };
-		01D045AF1C035821001468EF /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = aria2c; path = MacGap/aria2c; sourceTree = "<group>"; };
+		0150A6581CEDFDF3005EF883 /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2c; sourceTree = "<group>"; };
 		01D045B71C035C4B001468EF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		01D045B81C035C4B001468EF /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		1495814D15C15CCC00E1CFE5 /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notice.h; path = Classes/Commands/Notice.h; sourceTree = "<group>"; };
@@ -194,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				FA3F7741168F70780027B324 /* Cocoa.framework */,
-				01D045AF1C035821001468EF /* aria2c */,
 				FA3250E414BA883A00BF0781 /* public */,
 				FAE451C414BA79C600190544 /* MacGap */,
 				FAE451BD14BA79C600190544 /* Frameworks */,
@@ -236,6 +235,7 @@
 		FAE451C414BA79C600190544 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
+				0150A6581CEDFDF3005EF883 /* aria2c */,
 				013DC30A1CD46CAD00129D56 /* startaria.sh */,
 				01D045B71C035C4B001468EF /* MainMenu.xib */,
 				01D045B81C035C4B001468EF /* Window.xib */,
@@ -312,8 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0150A6591CEDFDF3005EF883 /* aria2c in Resources */,
 				FA3250E514BA883A00BF0781 /* public in Resources */,
-				01D045B01C035821001468EF /* aria2c in Resources */,
 				FAE451C914BA79C600190544 /* InfoPlist.strings in Resources */,
 				013DC30B1CD46CAD00129D56 /* startaria.sh in Resources */,
 				FAE451CF14BA79C600190544 /* Credits.rtf in Resources */,
@@ -437,7 +437,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MacGap/Aria2GUI-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aria2GUI;
 				PRODUCT_NAME = Aria2GUI;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -459,7 +459,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MacGap/Aria2GUI-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aria2GUI;
 				PRODUCT_NAME = Aria2GUI;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
