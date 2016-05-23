@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		013DC30B1CD46CAD00129D56 /* startaria.sh in Resources */ = {isa = PBXBuildFile; fileRef = 013DC30A1CD46CAD00129D56 /* startaria.sh */; };
-		0150A6591CEDFDF3005EF883 /* aria2c in Resources */ = {isa = PBXBuildFile; fileRef = 0150A6581CEDFDF3005EF883 /* aria2c */; };
+		01C08DDC1CF2875A00FBC6F6 /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01C08DDB1CF2875A00FBC6F6 /* aria2gui */; };
 		01D045B91C035C4B001468EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B71C035C4B001468EF /* MainMenu.xib */; };
 		01D045BA1C035C4B001468EF /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B81C035C4B001468EF /* Window.xib */; };
 		1495814F15C15CCC00E1CFE5 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495814E15C15CCC00E1CFE5 /* Notice.m */; };
@@ -57,8 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		013DC30A1CD46CAD00129D56 /* startaria.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = startaria.sh; sourceTree = "<group>"; };
-		0150A6581CEDFDF3005EF883 /* aria2c */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2c; sourceTree = "<group>"; };
+		01C08DDB1CF2875A00FBC6F6 /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
 		01D045B71C035C4B001468EF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		01D045B81C035C4B001468EF /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		1495814D15C15CCC00E1CFE5 /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notice.h; path = Classes/Commands/Notice.h; sourceTree = "<group>"; };
@@ -235,8 +233,7 @@
 		FAE451C414BA79C600190544 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
-				0150A6581CEDFDF3005EF883 /* aria2c */,
-				013DC30A1CD46CAD00129D56 /* startaria.sh */,
+				01C08DDB1CF2875A00FBC6F6 /* aria2gui */,
 				01D045B71C035C4B001468EF /* MainMenu.xib */,
 				01D045B81C035C4B001468EF /* Window.xib */,
 				FA3250E014BA87B800BF0781 /* Classes */,
@@ -312,11 +309,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0150A6591CEDFDF3005EF883 /* aria2c in Resources */,
 				FA3250E514BA883A00BF0781 /* public in Resources */,
 				FAE451C914BA79C600190544 /* InfoPlist.strings in Resources */,
-				013DC30B1CD46CAD00129D56 /* startaria.sh in Resources */,
 				FAE451CF14BA79C600190544 /* Credits.rtf in Resources */,
+				01C08DDC1CF2875A00FBC6F6 /* aria2gui in Resources */,
 				01D045BA1C035C4B001468EF /* Window.xib in Resources */,
 				FA3250E714BA8BCE00BF0781 /* application.icns in Resources */,
 				01D045B91C035C4B001468EF /* MainMenu.xib in Resources */,
