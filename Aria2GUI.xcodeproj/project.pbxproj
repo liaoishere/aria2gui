@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C08DDC1CF2875A00FBC6F6 /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01C08DDB1CF2875A00FBC6F6 /* aria2gui */; };
+		010915DC1D2E3822000E3AFE /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915D81D2E3822000E3AFE /* MASPreferencesWindowController.m */; };
+		010915DD1D2E3822000E3AFE /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010915DA1D2E3822000E3AFE /* MASPreferencesWindow.xib */; };
+		010915E51D2E387B000E3AFE /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915DF1D2E387B000E3AFE /* GeneralPreferencesViewController.m */; };
+		010915E61D2E387B000E3AFE /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010915E01D2E387B000E3AFE /* GeneralPreferencesView.xib */; };
+		010915E71D2E387B000E3AFE /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010915E21D2E387B000E3AFE /* AdvancedPreferencesViewController.m */; };
+		010915E81D2E387B000E3AFE /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010915E31D2E387B000E3AFE /* AdvancedPreferencesView.xib */; };
+		01A19F3D1D2AAE7000BC06FD /* aria2gui in Resources */ = {isa = PBXBuildFile; fileRef = 01A19F3C1D2AAE7000BC06FD /* aria2gui */; };
 		01D045B91C035C4B001468EF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B71C035C4B001468EF /* MainMenu.xib */; };
 		01D045BA1C035C4B001468EF /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D045B81C035C4B001468EF /* Window.xib */; };
 		1495814F15C15CCC00E1CFE5 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1495814E15C15CCC00E1CFE5 /* Notice.m */; };
@@ -56,7 +62,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		01C08DDB1CF2875A00FBC6F6 /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
+		010915D61D2E3822000E3AFE /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesViewController.h; path = Framework/MASPreferencesViewController.h; sourceTree = "<group>"; };
+		010915D71D2E3822000E3AFE /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesWindowController.h; path = Framework/MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		010915D81D2E3822000E3AFE /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASPreferencesWindowController.m; path = Framework/MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		010915D91D2E3822000E3AFE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Framework/en.lproj/MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		010915DE1D2E387B000E3AFE /* GeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralPreferencesViewController.h; sourceTree = "<group>"; };
+		010915DF1D2E387B000E3AFE /* GeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		010915E01D2E387B000E3AFE /* GeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesView.xib; sourceTree = "<group>"; };
+		010915E11D2E387B000E3AFE /* AdvancedPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedPreferencesViewController.h; sourceTree = "<group>"; };
+		010915E21D2E387B000E3AFE /* AdvancedPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedPreferencesViewController.m; sourceTree = "<group>"; };
+		010915E31D2E387B000E3AFE /* AdvancedPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvancedPreferencesView.xib; sourceTree = "<group>"; };
+		01A19F3C1D2AAE7000BC06FD /* aria2gui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = aria2gui; sourceTree = "<group>"; };
 		01D045B71C035C4B001468EF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		01D045B81C035C4B001468EF /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 		1495814D15C15CCC00E1CFE5 /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Notice.h; path = Classes/Commands/Notice.h; sourceTree = "<group>"; };
@@ -134,9 +150,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010915DB1D2E3822000E3AFE /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				010915D61D2E3822000E3AFE /* MASPreferencesViewController.h */,
+				010915D71D2E3822000E3AFE /* MASPreferencesWindowController.h */,
+				010915D81D2E3822000E3AFE /* MASPreferencesWindowController.m */,
+				010915DA1D2E3822000E3AFE /* MASPreferencesWindow.xib */,
+			);
+			name = MASPreferences;
+			path = ../../MASPreferencesDemo/MASPreferences;
+			sourceTree = "<group>";
+		};
+		010915E41D2E387B000E3AFE /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				010915DE1D2E387B000E3AFE /* GeneralPreferencesViewController.h */,
+				010915DF1D2E387B000E3AFE /* GeneralPreferencesViewController.m */,
+				010915E01D2E387B000E3AFE /* GeneralPreferencesView.xib */,
+				010915E11D2E387B000E3AFE /* AdvancedPreferencesViewController.h */,
+				010915E21D2E387B000E3AFE /* AdvancedPreferencesViewController.m */,
+				010915E31D2E387B000E3AFE /* AdvancedPreferencesView.xib */,
+			);
+			name = Preferences;
+			path = ../../MASPreferencesDemo/Demo;
+			sourceTree = "<group>";
+		};
 		FA3250E014BA87B800BF0781 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				010915E41D2E387B000E3AFE /* Preferences */,
 				FA3250E114BA87DD00BF0781 /* Commands */,
 				FA3250BA14BA85E700BF0781 /* Constants.h */,
 				6F169DA818CC35FD005EDDF3 /* CallbackDelegate.h */,
@@ -154,6 +197,7 @@
 		FA3250E114BA87DD00BF0781 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				010915DB1D2E3822000E3AFE /* MASPreferences */,
 				6F169DA518CC332E005EDDF3 /* Command.h */,
 				6F169DA618CC332E005EDDF3 /* Command.m */,
 				1495814D15C15CCC00E1CFE5 /* Notice.h */,
@@ -233,7 +277,7 @@
 		FAE451C414BA79C600190544 /* MacGap */ = {
 			isa = PBXGroup;
 			children = (
-				01C08DDB1CF2875A00FBC6F6 /* aria2gui */,
+				01A19F3C1D2AAE7000BC06FD /* aria2gui */,
 				01D045B71C035C4B001468EF /* MainMenu.xib */,
 				01D045B81C035C4B001468EF /* Window.xib */,
 				FA3250E014BA87B800BF0781 /* Classes */,
@@ -310,9 +354,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3250E514BA883A00BF0781 /* public in Resources */,
+				010915E61D2E387B000E3AFE /* GeneralPreferencesView.xib in Resources */,
 				FAE451C914BA79C600190544 /* InfoPlist.strings in Resources */,
 				FAE451CF14BA79C600190544 /* Credits.rtf in Resources */,
-				01C08DDC1CF2875A00FBC6F6 /* aria2gui in Resources */,
+				01A19F3D1D2AAE7000BC06FD /* aria2gui in Resources */,
+				010915E81D2E387B000E3AFE /* AdvancedPreferencesView.xib in Resources */,
+				010915DD1D2E3822000E3AFE /* MASPreferencesWindow.xib in Resources */,
 				01D045BA1C035C4B001468EF /* Window.xib in Resources */,
 				FA3250E714BA8BCE00BF0781 /* application.icns in Resources */,
 				01D045B91C035C4B001468EF /* MainMenu.xib in Resources */,
@@ -326,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				010915DC1D2E3822000E3AFE /* MASPreferencesWindowController.m in Sources */,
 				6F169DAA18CC35FD005EDDF3 /* CallbackDelegate.m in Sources */,
 				FA3250D314BA860800BF0781 /* App.m in Sources */,
 				FA3250D514BA860800BF0781 /* Dock.m in Sources */,
@@ -337,6 +385,8 @@
 				FA3250C714BA85E700BF0781 /* WebViewDelegate.m in Sources */,
 				FAE451CB14BA79C600190544 /* main.m in Sources */,
 				6F169DB118CD906F005EDDF3 /* MenuItemProxy.m in Sources */,
+				010915E51D2E387B000E3AFE /* GeneralPreferencesViewController.m in Sources */,
+				010915E71D2E387B000E3AFE /* AdvancedPreferencesViewController.m in Sources */,
 				FAE451D214BA79C600190544 /* AppDelegate.m in Sources */,
 				6F169DA718CC332E005EDDF3 /* Command.m in Sources */,
 				6FD672B618FE618E00C0DAAD /* UserDefaults.m in Sources */,
@@ -353,6 +403,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		010915DA1D2E3822000E3AFE /* MASPreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				010915D91D2E3822000E3AFE /* en */,
+			);
+			name = MASPreferencesWindow.xib;
+			sourceTree = "<group>";
+		};
 		FAE451C714BA79C600190544 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2015 Binux <roy@binux.me>
  *
  * This file is part of YAAW (https://github.com/binux/yaaw).
@@ -49,7 +49,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
     $("#main-alert .alert-msg").html(msg);
     $("#main-alert").data("msg_id", msg_id).show();
     if (timeout) {
-      window.setTimeout(function() { 
+      window.setTimeout(function() {
         if($("#main-alert").data("msg_id") == msg_id) {
           $("#main-alert").fadeOut();
         }
@@ -59,7 +59,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
   }
 
   function bind_event(dom) {
-    dom.find("[rel=tooltip]").tooltip({"placement": "bottom"});
+    dom.find("[rel=tooltip]").tooltip({"placement": "bottom", trigger : 'hover'});
   }
 
   function get_title(result) {
@@ -249,7 +249,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           ARIA2.refresh();
           $("#add-task-modal").modal('hide');
           YAAW.add_task.clean();
-        }, 
+        },
         function(result) {
           //console.debug(result);
 
@@ -300,7 +300,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           ARIA2.refresh();
           $("#add-task-modal").modal('hide');
           YAAW.add_task.clean();
-        }, 
+        },
         function(result) {
           //console.debug(result);
 
@@ -321,7 +321,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           ARIA2.refresh();
           $("#add-task-modal").modal('hide');
           YAAW.add_task.clean();
-        }, 
+        },
         function(result) {
           //console.debug(result);
 
@@ -371,7 +371,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
             if (auto_refresh && !select_lock)
               ARIA2.refresh();
           }
-        
+
           result = ARIA2.status_fix(result.result);
           $("#active-tasks-table").empty().append(YAAW.tpl.active_task({"tasks": result}));
           $.each(result, function(n, e) {
@@ -721,7 +721,7 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           var title = "↓"+YAAW.tpl.view.format_size_0()(result.downloadSpeed);
           if (result.uploadSpeed > 0)
             title += " ↑"+YAAW.tpl.view.format_size_0()(result.uploadSpeed);
-          title += " - Aria2GUI";
+            title += " - Aria2GUI";
           document.title = title;
         }
       );

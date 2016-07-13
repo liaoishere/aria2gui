@@ -7,14 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "MASPreferencesWindowController.h"
+#import "GeneralPreferencesViewController.h"
+#import "AdvancedPreferencesViewController.h"
+
 
 @implementation AppDelegate
+
 @synthesize windowController;
 
 
 - (void) applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-[self startAria2];
+   [self startAria2];
 }
 
 -(BOOL)applicationShouldHandleReopen:(NSApplication*)application
@@ -35,7 +40,7 @@
 }
 
 
--(void)applicationWillTerminate:(NSNotification *)notification
+-(void)applicationWillTerminate:(NSNotification *)aNotification
 {
     [self closeAria2];
 }
@@ -47,8 +52,9 @@
     NSString *supportPath=[NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *path = [NSString stringWithFormat:@"%@/%@/sh/",supportPath,[[NSBundle mainBundle] bundleIdentifier]];
     [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:NULL];
-    NSString *startAriaPath = [path stringByAppendingPathComponent:@"startaria.sh"];
-    ///Users/Nick/Library/Application Support/com.Aria2GUI/sh/
+    NSString *startAriaPath = [path stringByAppendingPathComponent:@"Aria2GUI.sh"];
+    //~/Library/Application Support/com.Aria2GUI/sh/
+    
     if ([fileManager fileExistsAtPath:startAriaPath])
     {
         NSLog(@"文件存在直接运行aria2c");
@@ -57,6 +63,7 @@
         task.arguments = @[startAriaPath];
         [task launch];
     }
+    
     else
     {
         NSLog(@"文件不存在先创建sh文件，写入配置，再运行aria2c");
@@ -78,5 +85,39 @@
     task.arguments = arg;
     [task launch];
 }
+
+- (NSWindowController *)preferencesWindowController
+{
+    if (_preferencesWindowController == nil)
+    {
+        NSViewController *generalViewController = [[GeneralPreferencesViewController alloc] init];
+        NSViewController *advancedViewController = [[AdvancedPreferencesViewController alloc] init];
+        NSArray *controllers = [[NSArray alloc] initWithObjects:generalViewController, advancedViewController, nil];
+        NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
+        _preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];
+    }
+    return _preferencesWindowController;
+}
+
+- (IBAction)openPreferences:(id __unused)sender
+{
+    [self.preferencesWindowController showWindow:nil];
+}
+
+NSString *const kFocusedAdvancedControlIndex = @"FocusedAdvancedControlIndex";
+
+- (NSInteger)focusedAdvancedControlIndex
+{
+    return [[NSUserDefaults standardUserDefaults] integerForKey:kFocusedAdvancedControlIndex];
+}
+
+- (void)setFocusedAdvancedControlIndex:(NSInteger)focusedAdvancedControlIndex
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:focusedAdvancedControlIndex forKey:kFocusedAdvancedControlIndex];
+}
+
+
+
+
 
 @end

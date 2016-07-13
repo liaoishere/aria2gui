@@ -11,9 +11,17 @@
 #import "WindowController.h"
 
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    NSWindowController *_preferencesWindowController;
+
+}
 
 @property (retain, nonatomic) WindowController *windowController;
+@property (nonatomic, readonly) NSWindowController *preferencesWindowController;
+@property (nonatomic) NSInteger focusedAdvancedControlIndex;
+
+- (IBAction)openPreferences:(id)sender;
 
 
 @end
