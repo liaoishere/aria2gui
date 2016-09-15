@@ -458,7 +458,11 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
               if (finished_tasks_list.indexOf(e.gid) != -1)
                 return;
               if (ARIA2.finish_notification) {
-                YAAW.notification("Aria2 Task Finished", e.title);
+                   MacGap.notify({
+                                 // type: 'sheet',
+                                 title: e.title,
+                                 content: 'Aria2 Task Finished',
+                                 });
               }
               finished_tasks_list.push(e.gid);
             });
@@ -718,11 +722,10 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           }
 
           $("#global-speed").empty().append(YAAW.tpl.global_speed(result));
-          var title = "↓"+YAAW.tpl.view.format_size_0()(result.downloadSpeed);
-          if (result.uploadSpeed > 0)
-            title += " ↑"+YAAW.tpl.view.format_size_0()(result.uploadSpeed);
-            title += " - Aria2GUI";
-          document.title = title;
+          if (result.downloadSpeed > 0)
+              MacGap.Dock.addBadge(YAAW.tpl.view.format_size_0()(result.downloadSpeed));
+          else
+              MacGap.Dock.removeBadge();
         }
       );
     },

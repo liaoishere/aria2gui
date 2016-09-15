@@ -23,7 +23,7 @@
     <title>Aria2GUI</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
     <meta name="author" content="Binux" />
-    
+
     <link href="img/favicon.ico" rel="shortcut icon" type="image/ico" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
   <body>
     <div class="container">
       <header class="main-head page-header">
-        <h1>Aria2GUI</h1>
+        <h1>Yet Another Aria2 Web Frontend</h1>
         <span id="offline-cached"></span>
         <div id="global-info" class="pull-right">
           <div id="global-version"></div>
@@ -112,6 +112,7 @@
             <a class="btn" id="setting-btn" data-toggle="modal" href="#setting-modal" rel="tooltip" title="Settings">
               <i class="icon-wrench"></i>
             </a>
+            
           </div>
         </div>
       </div>
@@ -213,7 +214,7 @@
                 <input type="radio" name="refresh_interval" value="60000"> 1min
               </label>
               <label class="radio inline">
-                <input type="radio" name="refresh_interval" value="0"> off 
+                <input type="radio" name="refresh_interval" value="0"> off
               </label>
             </div>
           </div>
@@ -239,10 +240,10 @@
       <a href="#" class="btn" data-dismiss="modal">Cancel</a>
     </div>
     </section>
-    
+
     <script id="global-speed-tpl" type="text/mustache-template">
       <i class="icon-download"></i> <span>{{#_v.format_size}}{{downloadSpeed}}{{/_v.format_size}}</span>/s
-        / 
+        /
       <i class="icon-upload"></i>  <span>{{#_v.format_size}}{{uploadSpeed}}{{/_v.format_size}}</span>/s
     </script>
 
@@ -253,7 +254,7 @@
           <div class="task-name">
             <i class="select-box"></i>
             <span title="{{title}}">{{title}}</span>
-          </div>
+                     </div>
           <div class="task-info">
             <span class="task-status" rel="tooltip" title="{{status}} {{#_v.error_msg}}{{errorCode}}{{/_v.error_msg}}"><i class="{{#_v.status_icon}}{{status}}{{/_v.status_icon}}"></i></span>
             <span>{{#_v.format_size}}{{completedLength}}{{/_v.format_size}} / {{#_v.format_size}}{{totalLength}}{{/_v.format_size}}</span>
@@ -281,8 +282,9 @@
         </div>
       </li>
       {{/tasks}}
-    </script>
-    
+
+      </script>
+
     <script id="other-task-tpl" type="text/mustache-template">
       {{#tasks}}
       <li class="task" id="task-gid-{{gid}}" data-status="{{status}}" data-gid="{{gid}}" data-infohash="{{infoHash}}">
@@ -332,7 +334,7 @@
           </div>
         </div>
       </div>
-    </script>      
+    </script>
 
     <script id="ib-status-tpl" type="text/mustache-template">
       <ul>
@@ -381,7 +383,7 @@
           <strong>No Tasks</strong>
         </div>
       </li>
-    </script>
+      </script>
 
     <script id="add-task-option-tpl" type="text/mustache-template">
       <hr />

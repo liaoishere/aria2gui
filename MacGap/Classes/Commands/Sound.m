@@ -1,97 +1,69 @@
+//
+//  Sound.m
+//  MG
+//
+//  Created by Tim Debo on 5/31/14.
+//
+//
+
 #import "Sound.h"
+#import <WebKit/WebKit.h>
+#import "WindowController.h"
 
-
-@interface PlayDelegate : CallbackDelegate <NSSoundDelegate> {
-}
-
-@property (nonatomic, weak) Sound *sound;
-
-- (id) initWithContext:(JSContextRef)aContext
-           forCallback:(WebScriptObject*)aCallback
-             withSound:(Sound*)aSound;
-@end
-
-@implementation PlayDelegate
-
-@synthesize sound;
-
-- (id) initWithContext:(JSContextRef)aContext
-           forCallback:(WebScriptObject*)aCallback
-             withSound:(Sound*)aSound
+@interface Sound ()
 {
-        self = [super initWithContext:aContext forCallback:aCallback];
-        if (!self)
-                return nil;
-        sound = aSound;
-        return self;
+    NSMutableDictionary * callbacks;
 }
-
-- (void)sound:(NSSound *)aSound didFinishPlaying:(BOOL)finishedPlaying {
-        [self callWithParams:[aSound name], nil];
-        [sound.pending removeObject:self];
-}
-
+@property (readwrite) JSContext* context;
 @end
 
 @implementation Sound
+@synthesize cb, context;
 
-@synthesize pending;
-
-- (id) initWithContext:(JSContextRef)aContext {
-    self = [super initWithContext:aContext];
-    if (!self) {
-        return nil;
+- (id) initWithWindowController:(WindowController *)aWindowController
+{
+    self = [super init];
+    if(self) {
+        self.windowController = aWindowController;
+        self.webView = aWindowController.webView;
     }
-    
-    pending = [NSMutableSet new];
+    callbacks = [NSMutableDictionary new];
     return self;
+    
 }
 
-- (void) playSound:(NSSound*)sound onComplete:(WebScriptObject*)callback {
-    if (callback != (id)[WebUndefined undefined]) {
-        PlayDelegate *d = [[PlayDelegate alloc] initWithContext:context
-                                                    forCallback:callback
-                                                      withSound:self];
-        [pending addObject:d];
-        [sound setDelegate:d];
+- (void) playSound:(NSSound*)sound onComplete:(JSValue*)callback {
+    if (callback && ![callback isKindOfClass:[NSNull class]]) {
+        //cb = callback;
+        [callbacks setObject:callback forKey:[sound name]];
+        context = [JSContext currentContext];
+        [sound setDelegate:self];
     }
     [sound play];
 }
 
-- (void) play:(NSString*)file onComplete:(WebScriptObject*)callback {
-	NSURL* fileUrl  = [NSURL fileURLWithPath:[[Utils sharedInstance] pathForResource:file]];
+- (void) play:(NSString*)file onComplete:(JSValue*)callback {
+	NSURL* fileUrl  = [NSURL fileURLWithPath:pathForResource(file)];
 	DebugNSLog(@"Sound file:%@", [fileUrl description]);
 	
 	NSSound* sound = [[NSSound alloc] initWithContentsOfURL:fileUrl byReference:YES];
+    if(!sound.name) {
+        sound.name = fileUrl.lastPathComponent;
+    }
+    
+    NSLog(@"Callback: %@, Sound: %@, Name: %@", callback, sound, [sound name]);
     [self playSound:sound onComplete:callback];
 }
 
-- (void) playSystem:(NSString*)name onComplete:(WebScriptObject*)callback {
+- (void) playSystem:(NSString*)name onComplete:(JSValue*)callback {
     NSSound *systemSound = [NSSound soundNamed:name];
     [self playSound:systemSound onComplete:callback];
 }
 
-#pragma mark WebScripting Protocol
-
-+ (BOOL) isSelectorExcludedFromWebScript:(SEL)selector {
-    return [self webScriptNameForSelector:selector] == nil;
-}
-
-+ (BOOL) isKeyExcludedFromWebScript:(const char*)name {
-	return YES;
-}
-
-+ (NSString*) webScriptNameForSelector:(SEL)selector {
-    id	result = nil;
-
-    if (selector == @selector(play:onComplete:)) {
-            result = @"play";
-    }
-    else if (selector == @selector(playSystem:onComplete:)) {
-            result = @"playSystem";
-    }
-
-    return result;
+- (void)sound:(NSSound *)aSound didFinishPlaying:(BOOL)finishedPlaying {
+    cb = [callbacks valueForKey:[aSound name]];
+    [cb callWithArguments:@[aSound.name]];
+    cb = nil;
 }
 
 @end

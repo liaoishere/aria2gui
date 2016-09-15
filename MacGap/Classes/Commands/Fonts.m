@@ -1,18 +1,25 @@
-#import "fonts.h"
+//
+//  Fonts.m
+//  MG
+//
+//  Created by Tim Debo on 5/27/14.
+//
+//
+
+#import "Fonts.h"
 
 @implementation Fonts
 
-
-- (NSArray*) availableFonts {
-    return [[NSFontManager sharedFontManager] availableFonts];
+- (JSValue*) availableFonts {
+    return [JSValue valueWithObject:[[NSFontManager sharedFontManager] availableFonts] inContext:[JSContext currentContext]];
 }
 
-- (NSArray*) availableFontFamilies {
-    return [[NSFontManager sharedFontManager] availableFontFamilies];
+- (JSValue*) availableFontFamilies {
+    return [JSValue valueWithObject:[[NSFontManager sharedFontManager] availableFontFamilies] inContext:[JSContext currentContext]];
 }
 
-- (NSArray*) availableMembersOfFontFamily:(NSString *)fontFamily {
-    return [[NSFontManager sharedFontManager] availableMembersOfFontFamily:fontFamily];
+- (JSValue*) availableMembersOfFontFamily:(NSString *)fontFamily {
+    return [JSValue valueWithObject:[[NSFontManager sharedFontManager] availableMembersOfFontFamily:fontFamily] inContext:[JSContext currentContext]];
 }
 
 - (CGFloat) defaultLineHeightForFont:(NSString*)theFontName ofSize:(CGFloat)theFontSize {
@@ -20,29 +27,6 @@
     NSLayoutManager *lm = [[NSLayoutManager alloc] init];
     
     return [lm defaultLineHeightForFont:theFont];
-}
-
-
-#pragma mark WebScripting Protocol
-
-+ (BOOL) isSelectorExcludedFromWebScript:(SEL)selector {
-    return NO;
-}
-
-+ (NSString*) webScriptNameForSelector:(SEL)selector {
-	id	result = nil;
-	
-	if (selector == @selector(availableMembersOfFontFamily:)) {
-		result = @"availableMembersOfFontFamily";
-    } else if (selector == @selector(defaultLineHeightForFont:ofSize:)) {
-        result = @"defaultLineHeightForFont";
-    }
-
-	return result;
-}
-
-+ (BOOL) isKeyExcludedFromWebScript:(const char*)name {
-	return NO;
 }
 
 @end

@@ -5,7 +5,6 @@
 #import "MASPreferencesViewController.h"
 
 @interface GeneralPreferencesViewController : NSViewController <MASPreferencesViewController>
-- (IBAction)deleteAria2GUISH:(id)sender;
 - (IBAction)editAria2GUISH:(id)sender;
 
 

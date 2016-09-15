@@ -1,9 +1,19 @@
-@interface Fonts : NSObject {
-}
+//
+//  Fonts.h
+//  MG
+//
+//  Created by Tim Debo on 5/27/14.
+//
+//
 
-- (NSArray*) availableFonts;
-- (NSArray*) availableFontFamilies;
-- (NSArray*) availableMembersOfFontFamily:(NSString*)fontFamily;
-- (CGFloat)  defaultLineHeightForFont:(NSString *)theFontName ofSize:(CGFloat)theFontSize;
+#import "Command.h"
+@protocol FontsExport <JSExport>
+- (JSValue*) availableFonts;
+- (JSValue*) availableFontFamilies;
+- (JSValue*) availableMembersOfFontFamily:(NSString*)fontFamily;
+JSExportAs(getLineHeight, - (CGFloat) defaultLineHeightForFont:(NSString *)theFontName ofSize:(CGFloat)theFontSize);
+@end
+
+@interface Fonts : Command <FontsExport>
 
 @end

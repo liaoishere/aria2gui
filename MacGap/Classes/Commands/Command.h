@@ -1,18 +1,27 @@
 //
 //  Command.h
-//  MacGap
+//  MG
 //
-//  Created by Joe Hildebrand on 1/10/12.
-//  Copyright (c) 2012 Twitter. All rights reserved.
+//  Created by Tim Debo on 5/23/14.
+//
 //
 
 #import <Foundation/Foundation.h>
-#import <Webkit/WebScriptObject.h>
+#import <JavaScriptCore/JavaScriptCore.h>
 
-@interface Command : NSObject {
-    JSContextRef context;
+
+@class WindowController, WebView;
+
+@interface Command : NSObject
+{
+    JSContextRef jsContext;
 }
-
-- (id) initWithContext:(JSContextRef)aContext;
-
++ (JSValue *)makeConstructor:(id)block inContext:(JSContext *)context;
++ (JSValue *)constructor;
+- (NSString*) exportName;
+- (void) initializePlugin;
+- (id) initWithWindowController: (WindowController*)aWindowController;
+- (id) initWithContext:(JSContext*)aContext;
+@property (nonatomic, weak) WebView* webView;
+@property (nonatomic, weak) WindowController* windowController;
 @end

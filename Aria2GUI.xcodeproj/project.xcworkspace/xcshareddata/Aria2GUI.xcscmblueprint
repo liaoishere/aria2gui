@@ -1,44 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B3B8A4CA363CCF5B62A9EA5DFCA0DE083DFB9632",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6619CA971E46A2C1689FBEA6301DFE23F3ECA032",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "B3B8A4CA363CCF5B62A9EA5DFCA0DE083DFB9632" : 0,
-    "0C90ACC290DC955A179FE7E650E732402173A8B4" : 0,
-    "3521135B4AC2E0D32CA10708AAA41C87DEE369E3" : 0,
-    "F0515DE9ED749C0E1C50A307EAD2A54C575AF047" : 0
+    "6619CA971E46A2C1689FBEA6301DFE23F3ECA032" : 0,
+    "B3B8A4CA363CCF5B62A9EA5DFCA0DE083DFB9632" : 0
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1C6A958-A2F4-431E-8BC4-EA8950FAA353",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "69CF05A9-022F-436E-8852-16EC55358A02",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "B3B8A4CA363CCF5B62A9EA5DFCA0DE083DFB9632" : "aria2gui\/",
-    "0C90ACC290DC955A179FE7E650E732402173A8B4" : "MASPreferencesDemo\/",
-    "3521135B4AC2E0D32CA10708AAA41C87DEE369E3" : "ScrollingTextView\/",
-    "F0515DE9ED749C0E1C50A307EAD2A54C575AF047" : "MASPreferencesDemo\/MASPreferences\/"
+    "6619CA971E46A2C1689FBEA6301DFE23F3ECA032" : "MacGap2\/",
+    "B3B8A4CA363CCF5B62A9EA5DFCA0DE083DFB9632" : "aria2gui\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Aria2GUI",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Aria2GUI.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shpakovski\/MASPreferencesDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MacGapProject\/MacGap2.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C90ACC290DC955A179FE7E650E732402173A8B4"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aaron-elkins\/ScrollingTextView.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3521135B4AC2E0D32CA10708AAA41C87DEE369E3"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6619CA971E46A2C1689FBEA6301DFE23F3ECA032"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yangshun1029\/aria2gui.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3B8A4CA363CCF5B62A9EA5DFCA0DE083DFB9632"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shpakovski\/MASPreferences.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0515DE9ED749C0E1C50A307EAD2A54C575AF047"
     }
   ]
 }
