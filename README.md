@@ -1,7 +1,14 @@
 Aria2GUI
 ===========
 
-![UI](http://i.imgur.com/lgVkiAw.png)
+![UI](preview.png)
+
+Fork from [aria2gui](https://github.com/yangshun1029/aria2gui)
+
+做了如下修改：
+
+- 支持 command + w 关闭窗口 
+- 使用 [webui-aria2](https://github.com/ziahamza/webui-aria2) 替代yaaw，使用 gitsubmodule 进行管理
 
 ## Features:
 
@@ -24,18 +31,19 @@ Aria2GUI
 
 ## Download:
 
-  [Releases](https://github.com/yangshun1029/aria2gui/releases)
+  [Releases](https://github.com/liaoishere/aria2gui/releases)
 
-## With special thanks to:  
+## With special thanks to:
 
  - [Aria2](https://aria2.github.io)
- - [YAAW](https://github.com/binux/yaaw)
+ - [webui-aria2](https://github.com/ziahamza/webui-aria2)
  - [MacGap](https://github.com/MacGapProject)
 
-## Contributors:  
+## Contributors:
 
   [Nick](https://github.com/yangshun1029)
- 
+  [Liao](https://github.com/liaoishere)
+
 ##License
 
 ![GPLv3](https://www.gnu.org/graphics/gplv3-127x51.png)
