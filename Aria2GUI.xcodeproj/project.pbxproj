@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,9 @@
 		01CB21FA1D69D0C4001465AD /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB21F01D69D0C4001465AD /* MASPreferencesWindow.xib */; };
 		01CB21FB1D69D0C4001465AD /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB21F21D69D0C4001465AD /* MASPreferencesWindowController.m */; };
 		01CB22071D69D0CD001465AD /* AdvancedPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB22011D69D0CD001465AD /* AdvancedPreferencesView.xib */; };
-		01CB22081D69D0CD001465AD /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB22031D69D0CD001465AD /* AdvancedPreferencesViewController.m */; };
 		01CB22091D69D0CD001465AD /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CB22041D69D0CD001465AD /* GeneralPreferencesView.xib */; };
 		01CB220A1D69D0CD001465AD /* GeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB22061D69D0CD001465AD /* GeneralPreferencesViewController.m */; };
+		0DB8FD291DD7A07900E8A938 /* AdvancedPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CB22031D69D0CD001465AD /* AdvancedPreferencesViewController.m */; };
 		2237E64A192B0177001E1393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E649192B0177001E1393 /* Cocoa.framework */; };
 		2237E67E192B0186001E1393 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E67D192B0186001E1393 /* WebKit.framework */; };
 		2237E680192B018D001E1393 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237E67F192B018D001E1393 /* JavaScriptCore.framework */; };
@@ -339,7 +339,7 @@
 				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 2237E641192B0177001E1393 /* Build configuration list for PBXProject "Aria2GUI" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -391,7 +391,6 @@
 				22B1CF301937734B00D2C294 /* App.m in Sources */,
 				22B1CF371937734B00D2C294 /* Menu.m in Sources */,
 				22A676E71944B140002F81FB /* File.m in Sources */,
-				01CB22081D69D0CD001465AD /* AdvancedPreferencesViewController.m in Sources */,
 				22B1CF3C1937734B00D2C294 /* Window.m in Sources */,
 				22B1CF3F1937734B00D2C294 /* WindowController.m in Sources */,
 				22B1CF3D1937734B00D2C294 /* Utils.m in Sources */,
@@ -404,6 +403,7 @@
 				01CB220A1D69D0CD001465AD /* GeneralPreferencesViewController.m in Sources */,
 				226AE65D193AA8FC00B15FB7 /* Sound.m in Sources */,
 				22B1CF331937734B00D2C294 /* Dialog.m in Sources */,
+				0DB8FD291DD7A07900E8A938 /* AdvancedPreferencesViewController.m in Sources */,
 				22B1CF361937734B00D2C294 /* Fonts.m in Sources */,
 				22B1CF2B1937734B00D2C294 /* AppDelegate.m in Sources */,
 				22B1CF391937734B00D2C294 /* Notify.m in Sources */,
@@ -529,7 +529,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacGap/Aria2GUI-Prefix.pch";
 				INFOPLIST_FILE = "MacGap/Aria2GUI-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Aria2GUI;
 				WRAPPER_EXTENSION = app;
@@ -544,7 +544,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MacGap/Aria2GUI-Prefix.pch";
 				INFOPLIST_FILE = "MacGap/Aria2GUI-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Aria2GUI;
 				WRAPPER_EXTENSION = app;
